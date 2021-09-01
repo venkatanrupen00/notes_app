@@ -1,0 +1,32 @@
+{
+ "gatewayid": "5aef05b3-5b82-4717-9e53-92349bd02797",
+ "gatewayname": "aigateway.localdomain",
+ "timestamp": 1628834144902,
+ "version": "0.0.1",
+ "claimtag": "urn:infosight:10c29bda-52c2-4fc0-bc83-fcdea591e672",
+ "agents_total": 4,
+ "agents_ok": 1,
+ "agents_failed": {
+  "count": 3,
+  "heartbeat_meta": [
+   {
+    "agent_id": "2ac622fe-38d1-4e79-a6ab-86eebebb1ca9",
+    "hostname": "ai-win19-std13",
+    "error": "agent is behind schedule in sending heartbeat data",
+    "collector_type": "NA"
+   },
+   {
+    "agent_id": "e7fb99db-4644-43a4-99b8-054f630ab6c6",
+    "hostname": "ai-win19-std13",
+    "error": "agent is behind schedule in sending heartbeat data",
+    "collector_type": "NA"
+   },
+   {
+    "agent_id": "e853986d-aee8-4e8a-800e-8cb8f669cc30",
+    "hostname": "ai-win19-std13",
+    "error": "agent is behind schedule in sending heartbeat data",
+    "collector_type": "NA"
+   }
+  ]
+ }
+}

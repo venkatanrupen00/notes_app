@@ -1,0 +1,106 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "required": [
+        "gatewayid",
+        "gatewayname",
+        "timestamp",
+        "version",
+        "claimtag",
+        "agents_total",
+        "agents_ok",
+        "agents_failed"
+    ],
+    "properties": {
+        "gatewayid": {
+            "type": "string"
+        },
+        "gatewayname": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "integer"
+        },
+        "version": {
+            "type": "string"
+        },
+        "claimtag": {
+            "type": "string"
+        },
+        "agents_total": {
+            "type": "integer"
+        },
+        "agents_ok": {
+            "type": "integer"
+        },
+        "agents_failed": {
+            "type": "object",
+            "required": [
+                "count",
+                "heartbeat_meta"
+            ],
+            "properties": {
+                "count": {
+                    "type": "integer",
+                },
+                "heartbeat_meta": {
+                    "type": "array",
+                                "required": [
+                                    "agent_id",
+                                    "hostname",
+                                    "error",
+                                    "collector_type"
+                                ],
+                                "properties": {
+                                    "agent_id": {
+                                        "$id": "#/properties/agents_failed/properties/heartbeat_meta/items/anyOf/0/properties/agent_id",
+                                        "type": "string",
+                                        "title": "The agent_id schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "2ac622fe-38d1-4e79-a6ab-86eebebb1ca9"
+                                        ]
+                                    },
+                                    "hostname": {
+                                        "$id": "#/properties/agents_failed/properties/heartbeat_meta/items/anyOf/0/properties/hostname",
+                                        "type": "string",
+                                        "title": "The hostname schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "ai-win19-std13"
+                                        ]
+                                    },
+                                    "error": {
+                                        "$id": "#/properties/agents_failed/properties/heartbeat_meta/items/anyOf/0/properties/error",
+                                        "type": "string",
+                                        "title": "The error schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "agent is behind schedule in sending heartbeat data"
+                                        ]
+                                    },
+                                    "collector_type": {
+                                        "$id": "#/properties/agents_failed/properties/heartbeat_meta/items/anyOf/0/properties/collector_type",
+                                        "type": "string",
+                                        "title": "The collector_type schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "NA"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

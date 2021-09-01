@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "gatewayid": {
+      "type": "string"
+    },
+    "gatewayname":{
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "string"
+    },
+    "claimtag": {
+      "type": "string"
+    },
+    "agents_total": {
+      "type": "integer"
+    },
+    "agents_ok": {
+      "type": "integer"
+    },
+    "agents_failed": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "heartbeat_meta": {
+          "type": [
+            "null",
+            "array"
+          ]
+        }
+      },
+      "required": [
+        "count",
+        "heartbeat_meta"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "gatewayid",
+    "timestamp",
+    "version",
+    "claimtag",
+    "agents_total",
+    "agents_ok",
+    "agents_failed"
+  ],
+  "additionalProperties": false
+}
+
+
+
+
+
+

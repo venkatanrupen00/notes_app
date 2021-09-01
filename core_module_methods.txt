@@ -1,0 +1,13 @@
+fs.appendFileSync(<path_to_file>, 'content_of_file')
+fs.writeFileSync(<path_to_file>, 'content_of_file')
+validatot.js
+npm init
+npm install
+npm i
+diff between appendFileSync and writeFileSync
+what is node js?
+what is npm?
+module.exports??
+require keyword
+process.argv[2]
+
